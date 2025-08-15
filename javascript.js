@@ -136,18 +136,18 @@ subMenuEl.classList.add("flex-around");
 
 
 
-subMenuEl.addEventListener('click', function(e){
+// subMenuEl.addEventListener('click', function(e){
 
-e.preventDefault();
+// e.preventDefault();
 
-if (e.target.tagName!== 'A'); return;
-console.log(e.target.textContent());
+// if (e.target.tagName!== 'A'); return;
+// console.log(e.target.textContent());
 
-topMenuLinks.forEach(link=> {if (link !== e.target)link.classList.remove('active')} );
-if (!this.clickedLinkObj.subLinks){
-  subMenuEl.style.top ='0px';
-  mainEl.innerHTML =  <h1>${clickedLinkObj.text}</h1>;
-}
+// topMenuLinks.forEach(link=> {if (link !== e.target)link.classList.remove('active')} );
+// if (!this.clickedLinkObj.subLinks){
+//   subMenuEl.style.top ='0px';
+//   mainEl.innerHTML =  <h1>${clickedLinkObj.text}</h1>;
+// }
 
 
-})
+// })
