@@ -112,7 +112,7 @@ subMenuEl.classList.add("flex-around");
 // Log the content of the <a> to verify the handler is working.
 
 // // The event listener should add the active class to the <a> element that was clicked, unless it was already active, in which case it should remove it.
-// The event listener should remove the active class from each other <a> element in topMenuLinks - whether the active class exists or not.
+// The event listener should remove the active class from each other <a> element in topmenulinks  - whether the active class exists or not.
 // Hint: Removing a non-existent class from an element does not cause an error!
 
   topMenuEl.addEventListener('click', e => {
@@ -136,4 +136,18 @@ subMenuEl.classList.add("flex-around");
 
 
 
+subMenuEl.addEventListener('click', function(e){
 
+e.preventDefault();
+
+if (e.target.tagName!== 'A'); return;
+console.log(e.target.textContent());
+
+topMenuLinks.forEach(link=> {if (link !== e.target)link.classList.remove('active')} );
+if (!this.clickedLinkObj.subLinks){
+  subMenuEl.style.top ='0px';
+  mainEl.innerHTML =  <h1>${clickedLinkObj.text}</h1>;
+}
+
+
+})
