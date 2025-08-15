@@ -37,12 +37,7 @@ topMenuEl.classList.add("flex-around");
 
 //  Menu data structure
 
-var menuLinks = [
-  { text: 'about', href: '/about' },
-  { text: 'catalog', href: '/catalog' },
-  { text: 'orders', href: '/orders' },
-  { text: 'account', href: '/account' },
-];
+
 var menuLinks = [
   {text: 'about', href: '/about'},
   {text: 'catalog', href: '#', subLinks: [
@@ -93,80 +88,52 @@ subMenuEl.style.backgroundColor = `var(--sub-menu-bg)`;
 // 4.)Add the class of flex-around to the subMenuEl element.
 subMenuEl.classList.add("flex-around");
 
-// // and Set the CSS position property of subMenuEl to the value of absolute.
+  // // and Set the CSS position property of subMenuEl to the value of absolute.
 
-// subMenuEl.style.position = `absolute`;
+  subMenuEl.style.position = `absolute`;
 
-
-
-
-
+  // // Set the CSS top property of subMenuEl to the value of 0.
+  subMenuEl.style.top ='0px';
 
 
 
-// // Set the CSS top property of subMenuEl to the value of 0.
 
-// subMenuEl.style.top = `0`;
+  // Part 4: Adding Menu Interaction
 
+  // Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
 
-// Part 4: Adding Menu Interaction
-
-
-// Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
-
-// let topMenuLink = topMenuEl.querySelectorAll(`a`);
+  let topMenuLinks = topMenuEl.querySelectorAll('a');
 
 
-// // Attach a delegated 'click' event listener to topMenuEl.
+  // // Attach a delegated 'click' event listener to topMenuEl.
 
-// topMenuEl.addEventListener('click', function(event) {
-  
-//   event.preventDefault();
+  // The first line of code of the event listener function should call the event object's preventDefault() method.
+// The second line of code of the function should immediately return if the element clicked was not an <a> element.
+// Log the content of the <a> to verify the handler is working.
 
+// // The event listener should add the active class to the <a> element that was clicked, unless it was already active, in which case it should remove it.
+// The event listener should remove the active class from each other <a> element in topMenuLinks - whether the active class exists or not.
+// Hint: Removing a non-existent class from an element does not cause an error!
 
-//   if (event.target.tagName !== 'A') return;
+  topMenuEl.addEventListener('click', e => {
+    e.preventDefault();
 
+    if(e.target.tagName !== 'A') return;
+    console.log (e.target.textContent);
+    e.target.classList.toggle('active');
 
-//   console.log(event.target.textContent.toLowerCase());
-
-//   topMenuLinks.forEach(link => {
-//     link.classList.remove('active');
-//   });
-
-
-//   event.target.classList.toggle('active');
-// });
-
-
-// let topMenuEl = document.getElementById (`top-menu`);
-// let topMenuLink = topMenuEl.querySelectorAll(`a`);
+    e.target.classList.toggle('active');
+    topMenuLinks.forEach(link=> {if (link !== e.target)link.classList.remove('active')} )
 
 
+})
 
-// new
 
-// // ✅ Select and cache the <nav id="top-menu">
-// let topMenuEl = document.getElementById('top-menu');
+// // Part 5: Adding Submenu Interaction
 
-// // ✅ Select and cache all <a> elements inside topMenuEl
-// let topMenuLinks = topMenuEl.querySelectorAll('a');
+// // If the clicked <a> element's "link" object within mennulinks has a subLinks property (all do, except for the "link" object for ABOUT), set the CSS top property of subMenuEl to 100%.
+// Otherwise, set the CSS top property of subMenuEl to 0.We also update the contents of `mainEl` within an `<h1>`.
 
-// // ✅ Attach delegated 'click' event listener to topMenuEl
-// topMenuEl.addEventListener('click', function(event) {
-//   // Prevent default link behavior
-//   event.preventDefault();
 
-//   // Only run if the clicked element is an <a>
-//   if (event.target.tagName !== 'A') return;
 
-//   // Log the clicked link's text (lowercase)
-//   console.log(event.target.textContent.toLowerCase());
 
-//   // Remove 'active' class from all links
-//   topMenuLinks.forEach(link => {
-//     link.classList.remove('active');
-//   });
-
-//   // Toggle 'active' class on the clicked link
-//   event.target.classList.toggle('active');
-// });
