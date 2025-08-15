@@ -36,6 +36,13 @@ topMenuEl.classList.add("flex-around");
 
 
 //  Menu data structure
+
+var menuLinks = [
+  { text: 'about', href: '/about' },
+  { text: 'catalog', href: '/catalog' },
+  { text: 'orders', href: '/orders' },
+  { text: 'account', href: '/account' },
+];
 var menuLinks = [
   {text: 'about', href: '/about'},
   {text: 'catalog', href: '#', subLinks: [
@@ -71,5 +78,95 @@ for(let link of menuLinks){
 }
 
 
+// Part 3: Creating the Submenu
 
 
+// Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
+let  subMenuEl = document.getElementById('sub-menu');
+
+// 2.) Set the height subMenuEl element to be "100%".
+subMenuEl.style.height = `100%`;
+
+// 3.) Set the background color of subMenuEl to the value stored in the --sub-menu-bg CSS custom property.
+subMenuEl.style.backgroundColor = `var(--sub-menu-bg)`;
+
+// 4.)Add the class of flex-around to the subMenuEl element.
+subMenuEl.classList.add("flex-around");
+
+// // and Set the CSS position property of subMenuEl to the value of absolute.
+
+// subMenuEl.style.position = `absolute`;
+
+
+
+
+
+
+
+
+// // Set the CSS top property of subMenuEl to the value of 0.
+
+// subMenuEl.style.top = `0`;
+
+
+// Part 4: Adding Menu Interaction
+
+
+// Select and cache the all of the <a> elements inside of topMenuEl in a variable named topMenuLinks.
+
+// let topMenuLink = topMenuEl.querySelectorAll(`a`);
+
+
+// // Attach a delegated 'click' event listener to topMenuEl.
+
+// topMenuEl.addEventListener('click', function(event) {
+  
+//   event.preventDefault();
+
+
+//   if (event.target.tagName !== 'A') return;
+
+
+//   console.log(event.target.textContent.toLowerCase());
+
+//   topMenuLinks.forEach(link => {
+//     link.classList.remove('active');
+//   });
+
+
+//   event.target.classList.toggle('active');
+// });
+
+
+// let topMenuEl = document.getElementById (`top-menu`);
+// let topMenuLink = topMenuEl.querySelectorAll(`a`);
+
+
+
+// new
+
+// // ✅ Select and cache the <nav id="top-menu">
+// let topMenuEl = document.getElementById('top-menu');
+
+// // ✅ Select and cache all <a> elements inside topMenuEl
+// let topMenuLinks = topMenuEl.querySelectorAll('a');
+
+// // ✅ Attach delegated 'click' event listener to topMenuEl
+// topMenuEl.addEventListener('click', function(event) {
+//   // Prevent default link behavior
+//   event.preventDefault();
+
+//   // Only run if the clicked element is an <a>
+//   if (event.target.tagName !== 'A') return;
+
+//   // Log the clicked link's text (lowercase)
+//   console.log(event.target.textContent.toLowerCase());
+
+//   // Remove 'active' class from all links
+//   topMenuLinks.forEach(link => {
+//     link.classList.remove('active');
+//   });
+
+//   // Toggle 'active' class on the clicked link
+//   event.target.classList.toggle('active');
+// });
