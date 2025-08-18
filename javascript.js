@@ -1,9 +1,9 @@
 <!-- // // Part 1 -------------------------------------------------|
-// // 1.) ✅ Select and cache the <main> element in a variable named mainEl.
+// // 1.) Select and cache the <main> element in a variable named mainEl.
 let mainEl = document.querySelector("main");
 
 
-// // 2.) ✅ Set the background color of mainEl to the value stored in the --main-bg CSS custom property.
+// // 2.) Set the background color of mainEl to the value stored in the --main-bg CSS custom property.
 // // // Hint: Assign a string that uses the CSS var() function like this: 'var(--main-bg)'.
 mainEl.style.backgroundColor = `var(--main-bg)`;
 
@@ -19,13 +19,13 @@ mainEl.classList.add("flex-ctr");
 
 
 // // Part 2 -------------------------------------------------|
-// // 1.) ✅ Select and cache the <nav id="top-menu"> element in a variable named topMenuEl.
+// // 1.) Select and cache the <nav id="top-menu"> element in a variable named topMenuEl.
 let topMenuEl = document.getElementById('top-menu');
 
-// // 2.) ✅ Set the height of the topMenuEl element to be 100%.
+// // 2.) Set the height of the topMenuEl element to be 100%.
 topMenuEl.style.height = `100%`;
 
-// // 3.) ✅ Set the background color of topMenuEl to the value stored in the --top-menu-bg CSS custom property.
+// // 3.)  Set the background color of topMenuEl to the value stored in the --top-menu-bg CSS custom property.
 topMenuEl.style.backgroundColor = `var(--top-menu-bg)`;
 
 // // 4.) Add a class of flex-around to topMenuEl.
