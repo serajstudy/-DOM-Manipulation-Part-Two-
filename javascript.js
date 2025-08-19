@@ -1,4 +1,4 @@
-// <!-- // // Part 1 
+//  // // Part 1 
 // // 1.) Select and cache the <main> e
 let mainEl = document.querySelector("main");
 
@@ -112,6 +112,8 @@ subMenuEl.classList.add("flex-around");
 // // // The event listener should add the active class to the <a> element that was clicked, unless it was already active, in which case it should remove it.
 // // The event listener should remove the active class from each other <a> element in topmenulinks  - whether the active class exists or not.
 // // Hint: Removing a non-existent class from an element does not cause an error!
+
+
 
   topMenuEl.addEventListener('click', e => {
     e.preventDefault();
