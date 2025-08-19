@@ -1,4 +1,4 @@
-<!-- // // Part 1 -------------------------------------------------|
+// <!-- // // Part 1 
 // // 1.) Select and cache the <main> e
 let mainEl = document.querySelector("main");
 
@@ -16,7 +16,7 @@ mainEl.innerHTML = `<h1>DOM Manipulation</h1>`;
 mainEl.classList.add("flex-ctr");
 
 
-// // Part 2 -------------------------------------------------|
+// // Part 2 
 // // 1.) Select and cache the <nav id="top-menu"> element in a variable named topMenuEl.
 let topMenuEl = document.getElementById('top-menu');
 
@@ -30,7 +30,7 @@ topMenuEl.style.backgroundColor = `var(--top-menu-bg)`;
 topMenuEl.classList.add("flex-around");
 
 
-// // Part 3 -------------------------------------------------|
+// // Part 3 
 
 
 // //  Menu data structure
