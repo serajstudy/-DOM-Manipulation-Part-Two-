@@ -29,7 +29,7 @@ var menuLinks = [
   ]},
 ];
 
-// Iterate over the entire menuLinks array and for each "link" object:
+// part 4 Iterate over the entire menuLinks array and for each "link" object:
 for (let link of menuLinks) {
   // Create an <a> element.
   let menuButton = document.createElement('a');
